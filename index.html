@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="main-container" id="mainContainer">
+      <div class="controls">
+        <div class="btn">
+          <div class="btn-red"></div>
+          <div class="btn-yellow"></div>
+          <div class="btn-green"></div>
+        </div>
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="label" id="label">
+          <div class="ball"></div>
+        </label>
+      </div>
+
+      <div class="mini-screen" id="miniScreen">0</div>
+      <div class="screen" id="screen">0</div>
+      <div class="keyboard-grid" id="keyboardGrid">
+        <button class="key operator" id="clear" value="">C</button>
+        <button class="key operator" id="plusMinus" value="">+-</button>
+        <button class="key operator" id="remainder" value="%">%</button>
+        <button class="key operator" value="/">/</button>
+        <button class="key number" value="7">7</button>
+        <button class="key number" value="8">8</button>
+        <button class="key number" value="9">9</button>
+        <button class="key operator" value="*">x</button>
+        <button class="key number" value="4">4</button>
+        <button class="key number" value="5">5</button>
+        <button class="key number" value="6">6</button>
+        <button class="key operator" value="-">-</button>
+        <button class="key number" value="1">1</button>
+        <button class="key number" value="2">2</button>
+        <button class="key number" value="3">3</button>
+        <button class="key operator" value="+">+</button>
+        <button class="key number" value="0">0</button>
+        <button class="key dot" id="decimal" value=".">.</button>
+        <button class="key" value="" id="historyBtn">
+          <img src="Assests\unnamed.png" width="25" />
+        </button>
+        <button class="key equal" id="equal" value="=">=</button>
+      </div>
+    </div>
+    <div class="operation-log" id="opLog">
+      Operation Log
+      <hr />
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------ COLORS -------- */
+
+:root {
+  --dark-blue: #232b3e;
+  --light-blue: #313852;
+  --light-grey: #8b959e;
+  --green-dark: #4da586;
+  --green-background: #a9c9ba;
+  --seashell: #f4fdfb;
+  --dark-numbers: #444851;
+  --white: #ffffff;
+  --yellow: #f2c563;
+  --green: #63c05b;
+  --red: #e46958;
+}
+
+.main-container {
+  border: 2px solid black;
+  width: 20rem;
+  height: 35rem;
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+  width: 5rem;
+}
+
+.mini-screen {
+  height: 4rem;
+  color: var(--green-dark);
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 2rem;
+  padding: 1rem 1rem 0 0;
+}
+
+.screen {
+  height: 4rem;
+  color: var(--green-dark);
+  text-align: right;
+  font-size: 4rem;
+  padding: 0 1rem 1rem 0;
+}
+
+.keyboard-grid {
+  width: au;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  background-color: var(--light-blue);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.key {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: var(--light-blue);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-red {
+  background-color: var(--red);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.btn-yellow {
+  background-color: var(--yellow);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.btn-green {
+  background-color: var(--green);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.operator {
+  color: var(--green-dark);
+  background-color: var(--dark-blue);
+}
+
+.number {
+  color: var(--light-grey);
+}
+
+.operator:hover {
+  background-color: var(--green-dark);
+  color: white;
+}
+
+.number:hover {
+  background-color: var(--white);
+  color: #232b3e;
+}
+
+.equal {
+  background-color: var(--green-dark);
+}
+
+.equal:hover {
+  background-color: var(--dark-blue);
+}
+
+/* ----------- DARK MODE --------- */
+
+.ball {
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid var(--light-grey);
+  transition: 0.3s all linear;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(1.2rem);
+}
+
+.label {
+  position: relative;
+  background-color: white;
+  width: 2.5rem;
+  height: 1.35rem;
+  border-radius: 0.625rem;
+  border: 1px solid var(--light-grey);
+  background-color: var(--green-dark);
+}
+
+.dot {
+  color: var(--light-grey);
+}
+
+/*  LIGTH MODE */
+
+.main-container--light {
+  background-color: var(--white);
+}
+
+.mini-screen--light {
+  color: var(--dark-blue);
+  background-color: var(--seashell);
+}
+
+.screen--light {
+  color: var(--dark-blue);
+  background-color: var(--seashell);
+}
+
+.keyboard-grid--light {
+  background-color: var(--white);
+}
+
+.key--light {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+.operator--light {
+  background-color: var(--seashell);
+  color: var(--dark-blue);
+}
+
+.number--light {
+  background-color: white;
+  color: var(--dark-blue);
+}
+
+.operator:hover {
+  background-color: var(--green-dark);
+  color: white;
+}
+
+.number--light:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.equal--light {
+  background-color: var(--green-dark);
+  color: var(--seashell);
+}
+
+.equal:hover {
+  background-color: #232b3e;
+}
+
+.label--light {
+  background-color: var(--white);
+}
+
+.dot--light {
+  color: var(--dark-blue);
+}
+
+.operation-log {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+  border: 2px solid var(--light-blue);
+  height: 10rem;
+  width: 18rem;
+  border-radius: 5%;
+  left: 50px;
+  text-align: center;
+  padding-top: 1rem;
+  bottom: 10rem;
+  background-color: var(--light-grey);
+  color: var(--dark-blue);
+}
+
+.--is-visible {
+  visibility: visible;
+}
